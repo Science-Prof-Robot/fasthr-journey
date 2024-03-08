@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Fasthr.AI Journey &amp; Milestones</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f354d572-94a9-4226-81cf-2b42afe5353f" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_space_shuttle_challenger.jpg" style="object-position:center 0%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Fasthr%20AI%20Journey%20&amp;%20Milestones%20f354d57294a9422681cf2b42afe5353f/Fasthr_icon_(1).svg"/></div><h1 class="page-title"><a href="http://Fasthr.AI">Fasthr.AI</a> Journey &amp; Milestones</h1><p class="page-description"></p></header><div class="page-body"><nav id="c3dac4d1-8767-49df-9d5b-2a2b724ef506" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e9b99db2-a94c-4ec4-9677-13a7eb021590">June’23 -  <a href="http://Fasthr.AI">Fasthr.AI</a> Talent Screening Platform</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#eb66eefb-c708-4b63-b07e-3dc32ce7ed84"><a href="http://Fasthr.AI">Fasthr.AI</a> Assessment Product Demo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#53340541-10c1-4bfd-8db9-c08cb23c32e5">Jan”23 - FastEngage - Workflow Automation for Recruitment</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4ec7296b-b11f-4137-bb77-d52e47a1d634">FastEngage - Workflow Automation Demo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6729cb6d-7ad3-4d37-8211-03519ac87be1">Oct”22 -  <a href="http://Fasthq.io">Fasthq.io</a> - Collaborative Tech hiring Platform</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9cc8e69d-609d-44d3-a9a9-c12e85bb5164"><a href="http://FastHQ.io">FastHQ.io</a> Product Demo Video</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#57ce89b7-90a7-420c-ba11-0f09cfa4f287">July”22 - AI-powered ATS for large recruitment teams</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#5037ad4f-d541-4d90-bc60-1236e44aaa0b"><a href="https://www.fastjobs.io/">FastJobs.io</a> - AI-powered ATS Product Demo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#08b1ea9f-fbd9-43a3-95c0-83e4954f570b">Jan”22 - Fastjobs Micro-learning &amp; Sales Jobs platform</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c9fe040e-7646-4fbc-b70b-7d58cf0e7e45">FastJobs - Upskilling &amp; Career-Tech Platform Demo</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#974e3ef0-fff9-4b32-a409-e21fae285032">CareerSathi - WhatsApp Career Guide Bot Demo</a></div></nav><h1 id="e9b99db2-a94c-4ec4-9677-13a7eb021590" class="">June’23 -  <a href="http://Fasthr.AI">Fasthr.AI</a> Talent Screening Platform</h1><table id="42bb5148-64c4-445d-b742-5171d98ae055" class="simple-table"><tbody><tr id="7676c8a1-5bda-4347-a98e-0f65c01bd17a"><td id="eH:S" class="" style="width:138px"><strong>Product</strong></td><td id="Ns@F" class="" style="width:700px"><strong><a href="http://Fasthr.AI">Fasthr.AI</a></strong><strong> - Unhackable personalized hiring assessments platform to close positions 5x faster</strong></td></tr><tr id="84aad2dc-04b0-4fc3-a707-3c4a5585d418"><td id="eH:S" class="" style="width:138px"><strong>Critical Problems Addressed</strong></td><td id="Ns@F" class="" style="width:700px"><strong>1. Duplicity of assessment questions, generic question banks and finite question options, making assessments ineffective.                                                                                                                                                                                       2. Broken Proctoring leading to rampant cheating and malpractices by candidates                                                                    3. 60-70% candidate drop-off rate during assessments due to MCQ test format, binary evaluation approach and long duration of assessments.</strong></td></tr><tr id="88ddcdb6-c94b-48e7-8ede-447366aa4d51"><td id="eH:S" class="" style="width:138px"><strong>Metrics Impacted</strong></td><td id="Ns@F" class="" style="width:700px"><strong>1. Reduction in cost of hiring                                                                                                                                                      2. Reduction in time to hire                                                                                                                                                        3. Reduction in probability of mis-hire</strong></td></tr><tr id="45893259-539f-4348-93a1-cf76a1972b5d"><td id="eH:S" class="" style="width:138px"><strong>Key customer pain points solved </strong></td><td id="Ns@F" class="" style="width:700px"><strong>1. Less interview bandwidth required from Technical Leaders                                                                                                     2. Total no. of interview rounds reduced, enabling recruiter meet their quotas more efficiently                                               3. Interviewers have access to deeper insights about candidate’s potential, improving interview experience for both interviewer and candidate                                                                                                                                               4. Improved candidate experience in hiring process, leads to higher joining ratio</strong></td></tr><tr id="617e6ca4-57b9-4302-9968-de18ee2b375a"><td id="eH:S" class="" style="width:138px"><strong>Products in Pipeline</strong></td><td id="Ns@F" class="" style="width:700px"><strong>1. Resume Evaluation Platform - AI evaluates 1000s of Resumes against the JD and each other to create detailed resume rankings based on parameters such as skills, location preference and professional background                                                                                                                                                                                2. Conversational Interview Intelligence Platform - Enhanced Interview experience empowering interviewers to ask deeper and specific questions to evaluate candidates and a detailed AI generated feedback report on candidate’s performance during the interview</strong></td></tr></tbody></table><h1 id="eb66eefb-c708-4b63-b07e-3dc32ce7ed84" class=""><a href="http://Fasthr.AI">Fasthr.AI</a> Assessment Product Demo</h1><figure id="c79568b1-3898-414a-a14b-7b45c76ffd8e"><div class="source"><a href="https://drive.google.com/file/d/1xgkBX15UtJtg2R6Sm9uId4YiqIF3LORO/view">https://drive.google.com/file/d/1xgkBX15UtJtg2R6Sm9uId4YiqIF3LORO/view</a></div></figure><p id="225aca62-c584-4a69-8345-3bf9c5736fa9" class="">
+</p><p id="5131d859-dd6f-4757-959f-6c24c1684f84" class="">
+</p><h1 id="53340541-10c1-4bfd-8db9-c08cb23c32e5" class="">Jan”23 - FastEngage - Workflow Automation for Recruitment</h1><table id="653c35d8-d318-40ae-9ab1-c30336277675" class="simple-table"><tbody><tr id="fec01a60-1db8-4778-9aa6-112bbd770f73"><td id="l`:Y" class="" style="width:219px"><strong>Product</strong></td><td id="LFfz" class="" style="width:523px"><strong>FastEngage - Automate Recruitment Workflows to save 70% time spent on repetitive recruiting tasks</strong></td></tr><tr id="a5218482-55d9-4b3e-a97d-1e35f5568bdb"><td id="l`:Y" class="" style="width:219px"><strong>Value Proposition</strong></td><td id="LFfz" class="" style="width:523px"><strong>1. Automate data entry, candidate outreach, candidate follow-ups, interview scheduling and more to reduce recruiter time spent on mundane tasks                                2. Scale recruiter bandwidth by 3x by reducing day-to-day to-do’s, enabling them to process talent pipeline faster with low effort                                                              3. Smooth and automatic connection and actions across all recruiting tools, ATS and HRMS</strong></td></tr></tbody></table><h1 id="4ec7296b-b11f-4137-bb77-d52e47a1d634" class="">FastEngage - Workflow Automation Demo</h1><figure id="220cfaef-b638-4a27-a2df-bdfa83c22011"><div class="source"><a href="https://drive.google.com/file/d/1eJYbH4UcnpAyBbvR4FOkKC-eaoFvTZJ0/view?usp=drive_link">https://drive.google.com/file/d/1eJYbH4UcnpAyBbvR4FOkKC-eaoFvTZJ0/view?usp=drive_link</a></div></figure><p id="590ef0e0-86ac-4397-a8f2-b9437423d93e" class="">
+</p><p id="365c2a29-3bf4-48fe-b703-83d6a11e9b0e" class="">
+</p><h1 id="6729cb6d-7ad3-4d37-8211-03519ac87be1" class="">Oct”22 -  <a href="http://Fasthq.io">Fasthq.io</a> - Collaborative Tech hiring Platform</h1><table id="18c54248-85e3-40f3-8aa2-2ced36064139" class="simple-table"><tbody><tr id="ddd9c61a-07c5-4526-a32c-34d1bdadacd8"><td id="p;B~" class="" style="width:181px"><strong>Product</strong></td><td id="{[;F" class="" style="width:527px"><strong><a href="http://FastHQ.ai">FastHQ.ai</a></strong><strong> - A collaborative platform to access pre-vetted Tech Talent and collaborate with teams to close positions with gamification</strong></td></tr><tr id="356b1db4-f513-4a82-8297-686a1104536a"><td id="p;B~" class="" style="width:181px"><strong>What we solved</strong></td><td id="{[;F" class="" style="width:527px"><strong>1. Access to pre-vetted perfect match tech talent pool                                                              2. Quick and easy pipeline management and collaboration with multiple stakeholders                                                                                                                           3. Managing and processing talent pipeline from multiple recruitment partners seamlessly</strong></td></tr><tr id="a3e3ad53-af69-4d27-a797-aaea364b34fc"><td id="p;B~" class="" style="width:181px"><strong>Our key outcomes</strong></td><td id="{[;F" class="" style="width:527px"><strong>1. High visibility and transparency on talent pipeline from several sources and vendors                                                                                                                                             2. Recruiters actively took actions to manage pipeline more efficiently due to fun and interactive interface</strong></td></tr></tbody></table><p id="ff43d6b0-7fa3-4146-865a-eba9e93462c9" class="">
+</p><h1 id="9cc8e69d-609d-44d3-a9a9-c12e85bb5164" class=""><a href="http://FastHQ.io">FastHQ.io</a> Product Demo Video</h1><figure id="19f53f93-bf16-47cf-837c-0e43846f333f"><div class="source"><a href="https://drive.google.com/file/d/1EntTmt89n-f484faCHui8RKjaITlonSY/view?usp=drive_link">https://drive.google.com/file/d/1EntTmt89n-f484faCHui8RKjaITlonSY/view?usp=drive_link</a></div></figure><p id="3e2fe7cb-2e97-4eb9-b00d-6bf72aafa9d9" class="">
+</p><p id="b41a3639-5c11-408f-9bd2-fb7e6d236883" class="">
+</p><h1 id="57ce89b7-90a7-420c-ba11-0f09cfa4f287" class="">July”22 - AI-powered ATS for large recruitment teams</h1><table id="bd656dd8-6107-4f91-97f2-8f0cdd1ed320" class="simple-table"><tbody><tr id="687aa89a-6630-4507-9452-9bebe8f79737"><td id="uIYV" class="" style="width:233px"><strong>Product</strong></td><td id="ijmf" class="" style="width:513px"><strong>Enterprise grade ATS platform powered by AI for large recruitment teams</strong></td></tr><tr id="b7ad7055-db72-4cc2-8ab5-777e6b341afb"><td id="uIYV" class="" style="width:233px"><strong>Core Proposition</strong></td><td id="ijmf" class="" style="width:513px"><strong>1. Automated 70% of manual data entry tasks via A-powered data enrichment                                                                                                                          2. Comprehensive Role-based-access system, cross-collaboration for 100+ member recruitment teams                                                                                                3. AI-powered system of record of candidate data for rediscovery and reapproaching candidates in future</strong></td></tr><tr id="e58910b7-ef96-4e92-8ded-0f6cf2386edc"><td id="uIYV" class="" style="width:233px"><strong>User Outcomes</strong></td><td id="ijmf" class="" style="width:513px"><strong>1. 100+ recruiters from our team seamlessly operated and served 150+ clients recruitment needs, with ease using our ATS.                                                                              2. Our recruiters generated INR 1.5Cr revenue using our ATS platform for recruiting activities.                                                                                                           2. Leadership team had deep visibility on the business, recruitment flow and critical ratios via Enterprise level analytics, processing large no. of variables.</strong></td></tr></tbody></table><h1 id="5037ad4f-d541-4d90-bc60-1236e44aaa0b" class=""><a href="https://www.fastjobs.io/">FastJobs.io</a> - AI-powered ATS Product Demo</h1><figure id="a3a23993-5309-4f53-9449-d6a9645d3d58"><div class="source"><a href="https://drive.google.com/file/d/1EMgbeoYAA5Jg75mD-JorHsd_e8gJyc2U/view?usp=drive_link">https://drive.google.com/file/d/1EMgbeoYAA5Jg75mD-JorHsd_e8gJyc2U/view?usp=drive_link</a></div></figure><p id="c6ba35db-9393-4bdf-b771-b44444de3de5" class="">
+</p><h1 id="08b1ea9f-fbd9-43a3-95c0-83e4954f570b" class="">Jan”22 - Fastjobs Micro-learning &amp; Sales Jobs platform</h1><table id="4a234c37-c398-4d87-941e-68bb71686a0f" class="simple-table"><tbody><tr id="ffb17ad4-b9e7-4f73-8ed4-d92ad5db3c14"><td id="{=na" class="" style="width:209px"><strong>Product</strong></td><td id="Ys{K" class="" style="width:544px"><strong>Career-tech platform job seekers land sales jobs with job &amp; industry specific micro-learning modules in Hindi/English and customer company wise learning paths.</strong></td></tr><tr id="fb7229a5-986d-4452-9687-eea3dc964fc8"><td id="{=na" class="" style="width:209px">Problem <strong>Addressed</strong></td><td id="Ys{K" class="" style="width:544px"><strong>1. 70% Indian youth unemployable due to poor education infra and job-specific ed                    2. Indian college grads from tier-2, tier-3 cities lack awareness and access to career opportunities and the right career guidance </strong></td></tr><tr id="d288a7e9-45c3-4302-8439-371b51cca9b7"><td id="{=na" class="" style="width:209px">User <strong>Outcome</strong></td><td id="Ys{K" class="" style="width:544px"><strong>1. Upskilled 3000+ job seekers and helped 500+ job seekers land sales jobs                                                                                2. Generated 40 Lacs revenue in 6 months by deploying pre-vetted sales talent at top companies such as Khatabook, Nobroker, HDFC bank, ICICI Bank and more</strong></td></tr></tbody></table><p id="cfb96f58-e139-4a82-abce-0988fe0987c7" class="">
+</p><h1 id="c9fe040e-7646-4fbc-b70b-7d58cf0e7e45" class="">FastJobs - Upskilling &amp; Career-Tech Platform Demo</h1><figure id="e88fdd5c-d060-464a-b773-ab18e2050f4b"><div class="source"><a href="https://drive.google.com/file/d/175-pX97Ndyg2ECm6cTiX8V-sykdG-kC4/view">https://drive.google.com/file/d/175-pX97Ndyg2ECm6cTiX8V-sykdG-kC4/view</a></div></figure><p id="4f69c0d5-0ea7-42a4-9cf1-e0ffb2d9b5e7" class="">
+</p><h1 id="974e3ef0-fff9-4b32-a409-e21fae285032" class="">CareerSathi - WhatsApp Career Guide Bot Demo</h1><figure id="b7f9c743-ac70-44a3-9ce8-962a48477315"><div class="source"><a href="https://drive.google.com/file/d/1C7H6LdfVNB2LwmyxFuqtKezcbX86uXDE/view?usp=drive_link">https://drive.google.com/file/d/1C7H6LdfVNB2LwmyxFuqtKezcbX86uXDE/view?usp=drive_link</a></div></figure><p id="c2096b93-a5c9-4f8a-bbd6-bb7f4491c4cf" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
